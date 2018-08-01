@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TBParse_Example' do
+  pod 'TBParse', :path => '../'
+
+  target 'TBParse_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
