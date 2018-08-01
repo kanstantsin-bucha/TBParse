@@ -30,11 +30,7 @@ A basic conversions for PFObject and Parse strings columns to lists of numbers, 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'TBParse/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'TBParse' => ['TBParse/Assets/*.png']
-  # }
 
-  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'TBParse/Classes/**/*.h'
   s.dependency 'Parse'
 end
