@@ -1,0 +1,6 @@
+framework module Pods_TBParse_Example {
+  umbrella header "Pods-TBParse_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
