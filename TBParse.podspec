@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TBParse'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A basic conversions for PFObject and Parse strings columns to lists of numbers, strings or key: value pairs.'
 
 # This description is used to generate tags and improve search results.
@@ -25,12 +25,16 @@ A basic conversions for PFObject and Parse strings columns to lists of numbers, 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'truebucha' => 'truebucha@gmail.com' }
   s.source           = { :git => 'https://github.com/truebucha/TBParse.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/truebucha'
+  s.social_media_url = 'https://twitter.com/truebucha'
 
+  s.module_name   = 'TBParse'
+  s.swift_version = '4.1'
   s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.10'
 
   s.source_files = 'TBParse/Classes/**/*'
-
   s.public_header_files = 'TBParse/Classes/**/*.h'
+  
+  s.frameworks = 'Foundation'
   s.dependency 'Parse'
 end
