@@ -10,23 +10,14 @@
 
 @class PFObject;
 
-@interface TBParse : NSObject
-    
-+ (NSDictionary<NSString *, NSObject *> *) dictionaryUsingParseObject: (PFObject *) object;
+@interface TBParseConversion : NSObject
     
 + (NSArray<NSNumber *> *) numbersUsingStringsList: (NSString *) list;
 + (NSArray<NSString *> *) wordsUsingStringsList: (NSString *) list;
 + (NSDictionary<NSString *, NSNumber *> *) pairsUsingStrings: (NSString *) strings;
     
-+ (BOOL) object: (PFObject *) object
-  isKindOfClass: (NSString *) class;
-    
 + (id) objectOfClass: (Class) class
       fromDictionary: (NSDictionary *)  dict
-            usingKey: (NSString *) key;
-    
-+ (id) objectOfClass: (Class) class
-     fromParseObject: (PFObject *) object
             usingKey: (NSString *) key;
 
 @end

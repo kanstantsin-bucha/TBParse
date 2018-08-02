@@ -1,25 +1,23 @@
 //
-//  TBViewController.m
-//  TBParse
+//  ViewController.m
+//  TBParseConversion_Example
 //
-//  Created by truebucha on 08/01/2018.
-//  Copyright (c) 2018 truebucha. All rights reserved.
+//  Created by Kanstantsin Bucha on 8/2/18.
+//  Copyright © 2018 truebucha. All rights reserved.
 //
 
-#import "TBViewController.h"
-#import <TBParse/TBParse.h>
+#import "ViewController.h"
 #import <TBParse/TBParseConversion.h>
 
-@interface TBViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation TBViewController
+@implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     NSArray * numbers = [TBParseConversion numbersUsingStringsList: @"1;2;3"];
     NSLog(@"converted numbers: %@", numbers);
@@ -31,10 +29,11 @@
     NSLog(@"converted pairs: %@", pairs);
 }
 
-- (void)didReceiveMemoryWarning
-{
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

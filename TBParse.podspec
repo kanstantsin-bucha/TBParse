@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TBParse'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'A basic conversions for PFObject and Parse strings columns to lists of numbers, strings or key: value pairs.'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,19 @@ A basic conversions for PFObject and Parse strings columns to lists of numbers, 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
 
-  s.source_files = 'TBParse/Classes/**/*'
-  s.public_header_files = 'TBParse/Classes/**/*.h'
+  s.default_subspecs = 'Core', 'Conversion'
+  
+  s.subspec 'Core' do |sp|
+      sp.source_files = 'TBParse/Classes/Core/*'
+      sp.public_header_files = 'TBParse/Classes/Core/*.h'
+      sp.dependency 'TBParse/Conversion'
+      sp.dependency 'Parse'
+  end
+  
+  s.subspec 'Conversion' do |sp|
+      sp.source_files = 'TBParse/Classes/Conversion/*'
+      sp.public_header_files = 'TBParse/Classes/Conversion/*.h'
+  end
   
   s.frameworks = 'Foundation'
-  s.dependency 'Parse'
 end

@@ -11,7 +11,6 @@
 #endif
 
 #import "TBParseConversion.h"
-#import "TBParse.h"
 
 FOUNDATION_EXPORT double TBParseVersionNumber;
 FOUNDATION_EXPORT const unsigned char TBParseVersionString[];

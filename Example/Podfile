@@ -1,5 +1,9 @@
 use_frameworks!
 
+target 'TBParseConversion_Example' do
+    pod 'TBParse/Conversion', :path => '../'
+end
+
 target 'TBParse_Example' do
   pod 'TBParse', :path => '../'
 
