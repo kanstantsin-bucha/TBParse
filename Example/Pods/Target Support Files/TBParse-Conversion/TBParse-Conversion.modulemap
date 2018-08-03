@@ -1,6 +1,0 @@
-framework module TBParse {
-  umbrella header "TBParse-Conversion-umbrella.h"
-
-  export *
-  module * { export * }
-}

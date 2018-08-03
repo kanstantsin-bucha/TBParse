@@ -8,7 +8,7 @@
 
 #import "TBParse.h"
 #import <Parse/Parse.h>
-#import "TBParseConversion.h"
+#import <TBConversions/TBParseConversions.h>
 
 #define TB_Parse_Strings_ComponentsSeparators_Characters @";"
 #define TB_Parse_Strings_PairDivider_Characters @":"
@@ -34,9 +34,9 @@
 + (id)objectOfClass:(Class)class
     fromParseObject:(PFObject *)object
            usingKey:(NSString *)key {
-    NSObject * result = [TBParseConversion objectOfClass: class
-                                          fromDictionary: (NSDictionary<NSString *, NSObject *> *)object
-                                                usingKey: key];
+    NSObject * result = [TBParseConversions objectOfClass: class
+                                           fromDictionary: (NSDictionary<NSString *, NSObject *> *)object
+                                                 usingKey: key];
     return result;
 }
     

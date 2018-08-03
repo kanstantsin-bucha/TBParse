@@ -4,22 +4,21 @@ PODS:
     - Parse/Core (= 1.17.1)
   - Parse/Core (1.17.1):
     - Bolts/Tasks (~> 1.9)
-  - TBParse (1.0.2):
-    - TBParse/Conversion (= 1.0.2)
-    - TBParse/Core (= 1.0.2)
-  - TBParse/Conversion (1.0.2)
-  - TBParse/Core (1.0.2):
+  - TBConversions/Parse (1.0.0)
+  - TBParse (1.1.2):
+    - TBParse/Core (= 1.1.2)
+  - TBParse/Core (1.1.2):
     - Parse
-    - TBParse/Conversion
+    - TBConversions/Parse
 
 DEPENDENCIES:
   - TBParse (from `../`)
-  - TBParse/Conversion (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
     - Parse
+    - TBConversions
 
 EXTERNAL SOURCES:
   TBParse:
@@ -28,8 +27,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
-  TBParse: 67218824558a2334adf251a0a275029c8721b211
+  TBConversions: a49cd4e0bc30e426b0f2595b23d6e47e958584c8
+  TBParse: 988bca475900a7cf5d0be4dc933e5a7f0c636a12
 
-PODFILE CHECKSUM: 85bf2e0d12303c52b1b56be2d6052d2e1b0304e5
+PODFILE CHECKSUM: 85c88d0d3122c4550312eef2a3adf019149462f5
 
 COCOAPODS: 1.5.3

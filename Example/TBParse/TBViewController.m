@@ -7,8 +7,8 @@
 //
 
 #import "TBViewController.h"
+#import <Parse/Parse.h>
 #import <TBParse/TBParse.h>
-#import <TBParse/TBParseConversion.h>
 
 @interface TBViewController ()
 
@@ -16,25 +16,29 @@
 
 @implementation TBViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSArray * numbers = [TBParseConversion numbersUsingStringsList: @"1;2;3"];
-    NSLog(@"converted numbers: %@", numbers);
+    PFObject * object = [PFObject objectWithClassName: @"Test"
+                                           dictionary: @{ @"testString": @"string", @"testNumber": @1, @"failedTest": [NSDate date]}];
     
-    NSArray * words = [TBParseConversion wordsUsingStringsList: @"my;her;his"];
-    NSLog(@"converted words: %@", words);
+    NSLog(@"printing Test ?: %@", [TBParse object: object isKindOfClass: @"Test"] == YES ? @"YES" : @"NO");
     
-    NSDictionary * pairs = [TBParseConversion pairsUsingStrings: @"1:2;key:12;gravity: 9.8"];
-    NSLog(@"converted pairs: %@", pairs);
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"printing dict: %@", [TBParse dictionaryUsingParseObject: object]);
+    
+    NSLog(@"printing string: %@", [TBParse objectOfClass: [NSString class]
+                                         fromParseObject: object
+                                                usingKey: @"testString"]);
+    
+    NSLog(@"printing number: %@", [TBParse objectOfClass: [NSNumber class]
+                                         fromParseObject: object
+                                                usingKey: @"testNumber"]);
+    
+    NSLog(@"printing failed: %@", [TBParse objectOfClass: [NSString class]
+                                         fromParseObject: object
+                                                usingKey: @"failedTest"]);
 }
 
 @end
