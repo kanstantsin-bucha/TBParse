@@ -1,3 +1,5 @@
+It was archived. Please write to me at kanstantsin.bucha@icloud.com in case any issues occur.
+
 # TBParse
 
 [![CI Status](https://img.shields.io/travis/truebucha/TBParse.svg?style=flat)](https://travis-ci.org/truebucha/TBParse)
